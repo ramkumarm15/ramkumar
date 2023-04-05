@@ -5,6 +5,12 @@
   /* padding: 6rem 0; */
 }
 
+@media screen and (max-width: 992px) {
+  .about {
+    padding: 7rem 0;
+  }
+}
+
 .about-content {
   display: flex;
   justify-content: center;
@@ -43,11 +49,16 @@
 }
 
 @media screen and (max-width: 992px) {
-  .about {
-    padding: 7rem 0;
-  }
   .about-text {
     text-align: center;
+  }
+
+  .about-text h1 {
+    font-size: 4rem;
+  }
+
+  .about-text h3 {
+    font-size: 1.5rem;
   }
 }
 .techStacks {
@@ -62,12 +73,27 @@
   flex-direction: column;
 }
 
-.techStacks-content span {
-  font-size: 1rem;
+.techStacks-content h4 {
+  font-size: 1.5rem;
   border-right: none;
   border-bottom: 4px solid var(--active);
   margin-bottom: 2rem;
   font-weight: 600;
+  padding-bottom: 15px;
+}
+
+@media screen and (min-width: 992px) {
+  .techStacks-content {
+    flex-direction: row;
+  }
+
+  .techStacks-content h4 {
+    padding-right: 1.4rem;
+    border-bottom: none;
+    border-right: 4px solid var(--active);
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
 }
 
 .techStacks-icon ul {
@@ -76,6 +102,12 @@
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .techStacks-icon ul {
+    justify-content: center;
+  }
 }
 
 .techStacks ul li {
@@ -93,23 +125,4 @@
 .techStacks ul li img {
   width: 2rem;
   height: 2rem;
-}
-
-@media screen and (max-width: 900px) {
-  .techStacks-icon ul {
-    justify-content: center;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .techStacks-content {
-    flex-direction: row;
-  }
-
-  .techStacks-content span {
-    padding-right: 1.4rem;
-    border-bottom: none;
-    border-right: 4px solid var(--active);
-    margin-bottom: 0;
-  }
 }

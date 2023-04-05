@@ -16,6 +16,13 @@
   letter-spacing: 4px;
 }
 
+@media screen and (max-width: 992px) {
+  .content-head {
+    font-size: 4.5rem;
+    text-align: center;
+  }
+}
+
 .project_conatiner {
   display: flex;
   width: 100%;
@@ -32,6 +39,14 @@
   flex-direction: row;
   gap: 2rem;
   padding: 2rem;
+}
+
+@media screen and (max-width:992px) {
+  .project_card {
+    flex-direction: column;
+    height: 40rem;
+    justify-content: center;
+  }
 }
 
 .project_img {
@@ -53,23 +68,41 @@
   width: 30rem;
 }
 
-a.text-active:hover{
+.project_desc h3 {
+  font-size: 2.3rem;
+}
+
+.project_desc p {
+  font-size: 1.3rem;
+}
+
+a.text-active:hover {
   color: var(--active);
 }
 
 @media screen and (max-width: 992px) {
-  .project_card {
-    flex-direction: column;
-    height: 40rem;
-    justify-content: center;
-  }
-
   .project_desc,
   .project_img {
     width: 100%;
   }
 
-  .project_img {
-    height: 30rem;
+  .project_desc h3 {
+    font-size: 1.9rem;
   }
+
+  .project_desc p {
+    font-size: 1.23rem;
+  }
+}
+
+.techUsed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+}
+
+.techUsed .badge{
+  background: #08fdd8;
+  color: #000;
 }
