@@ -1,0 +1,139 @@
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+@media screen and (max-width: 992px) {
+  .hero-section {
+    padding: 10rem 0;
+  }
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+
+@media screen and (min-width: 992px) {
+  .hero {
+    flex-direction: row;
+  }
+}
+
+.hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero-text {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-text h3 {
+  color: var(--text-grey);
+  font-size: 2.4rem;
+  line-height: 1.6;
+  font-weight: 500;
+  overflow: hidden;
+}
+
+.hero-text h3 span i {
+  color: var(--active);
+}
+
+@media screen and (max-width: 992px) {
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+  .hero-content h3 {
+    font-size: 1.8rem;
+  }
+}
+
+.heroImg {
+  z-index: -9;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 55%;
+  background-image: url("^assets/heroImg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: bg-photo 1.2s cubic-bezier(0.5, 0.6, 0.6, 1);
+  animation-fill-mode: backwards;
+}
+
+@media screen and (max-width: 992px) {
+  .heroImg {
+    left: 0%;
+    height: 100%;
+    top: 40%;
+    /* bottom: -100px; */
+  }
+}
+
+/*
+  Animations 
+*/
+.animate {
+  animation: heroText 0.8s cubic-bezier(0.2, 0.6, 0.2, 1);
+  animation-fill-mode: backwards;
+}
+
+.delay04 {
+  animation-delay: 0.4s;
+}
+
+@keyframes heroText {
+  0% {
+    transform: translateY(30vh);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes bg-photo {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes borderShape {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
